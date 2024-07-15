@@ -1,6 +1,6 @@
-
 package view.dangnhap;
 
+import view.main.Main;
 import javax.swing.JOptionPane;
 import view.model.TaiKhoan;
 import view.until.DangNhap;
@@ -8,6 +8,8 @@ import repository.dangnhap.DangNhapRepository;
 
 public class DangNhapView extends javax.swing.JFrame {
 
+    public static boolean roleDN;
+    public static String nameDN;
     DangNhap dn = new DangNhap();
     DangNhapRepository dnp = new DangNhapRepository();
 
@@ -20,6 +22,28 @@ public class DangNhapView extends javax.swing.JFrame {
         lbl_enable.setVisible(false);
         txt_MatKhau.setEchoChar((char) 8226);
     }
+
+//    public boolean checkRole() {
+//        char[] password = txt_MatKhau.getPassword();
+//        String matKhau = new String(password);
+//        TaiKhoan tk = dnp.checkTaiKhoan(txt_TaiKhoan.getText(), matKhau);
+//        return role = tk.isChucVu();
+//    }
+//
+//    public String checkName() {
+//        char[] password = txt_MatKhau.getPassword();
+//        String matKhau = new String(password);
+//        TaiKhoan tk = dnp.checkTaiKhoan(txt_TaiKhoan.getText(), matKhau);
+//        return name = tk.getHoTen();
+//    }
+//
+//    public boolean isRole() {
+//        return role;
+//    }
+//
+//    public String getNameDN() {
+//        return name;
+//    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -157,18 +181,19 @@ public class DangNhapView extends javax.swing.JFrame {
         // TODO add your handling code here:
         //Chuyen matkhau ve kieu string
         char[] password = txt_MatKhau.getPassword();
-        System.out.println(txt_MatKhau.getPassword());
         String matKhau = new String(password);
         TaiKhoan tk = dnp.checkTaiKhoan(txt_TaiKhoan.getText(), matKhau);
-        System.out.println(matKhau);
-
         if (tk == null) {
             JOptionPane.showMessageDialog(null, "Tai khoan hoac mat khau ko dung");
             return;
         }
-        System.out.println(tk.getHoTen());
-        JOptionPane
-                .showMessageDialog(null, "Dang nhap thanh cong");
+        JOptionPane.showMessageDialog(null, "Dang nhap thanh cong");
+        nameDN = tk.getHoTen();
+        roleDN = tk.isChucVu();
+        Main main = new view.main.Main();
+        main.setVisible(true);
+        dispose();
+        
     }//GEN-LAST:event_btn_DangNhapActionPerformed
 
     private void txt_TaiKhoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_TaiKhoanActionPerformed
