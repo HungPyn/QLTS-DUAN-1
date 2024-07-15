@@ -5,9 +5,11 @@
 package view.component;
 
 import javax.swing.JPanel;
-
+import view.dangnhap.DangNhapView;
+import view.nhanviendialog.ChiTietNhanVienDiaLog;
 
 public class Profile extends javax.swing.JPanel {
+
 
     /**
      * Creates new form Profile
@@ -15,9 +17,10 @@ public class Profile extends javax.swing.JPanel {
     public Profile() {
         initComponents();
         setOpaque(false);
+        lblName.setText(DangNhapView.nameDN);
+
     }
 
-    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -102,7 +105,8 @@ public class Profile extends javax.swing.JPanel {
     }//GEN-LAST:event_lblRoleMouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        
+
+        System.exit(0);
     }//GEN-LAST:event_jLabel1MouseClicked
 
 

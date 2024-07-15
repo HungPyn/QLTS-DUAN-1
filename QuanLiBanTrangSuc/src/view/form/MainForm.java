@@ -3,12 +3,13 @@ package view.form;
 import java.awt.Component;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
+import view.dangnhap.DangNhapView;
+
 
 public class MainForm extends javax.swing.JPanel {
-
     public MainForm() {
         initComponents();
-        show(new view.giaodienjpanel.GiaoDienDoanhThu());
+        show(new view.giaodienjpanel.GiaoDienDoanhThu()); 
     }
 
     @SuppressWarnings("unchecked")

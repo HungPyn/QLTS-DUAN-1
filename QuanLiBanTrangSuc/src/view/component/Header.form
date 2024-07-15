@@ -18,8 +18,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="cmdMenu" min="-2" pref="44" max="-2" attributes="0"/>
-              <EmptySpace pref="617" max="32767" attributes="0"/>
-              <Component id="titleBar1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="654" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -27,10 +26,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="cmdMenu" min="-2" max="-2" attributes="0"/>
-                  <Component id="titleBar1" min="-2" max="-2" attributes="0"/>
-              </Group>
+              <Component id="cmdMenu" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
@@ -43,8 +39,9 @@
           <Image iconType="3" name="/icon/menu.png"/>
         </Property>
       </Properties>
-    </Component>
-    <Component class="swing.TitleBar" name="titleBar1">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cmdMenuActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
