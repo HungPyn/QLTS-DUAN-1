@@ -4,7 +4,7 @@
  */
 package repository.dangnhap;
 
-import model.TaiKhoan;
+import view.model.TaiKhoan;
 
 /**
  *

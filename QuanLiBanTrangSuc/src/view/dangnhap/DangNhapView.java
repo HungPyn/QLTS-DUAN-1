@@ -2,7 +2,7 @@
 package view.dangnhap;
 
 import javax.swing.JOptionPane;
-import model.TaiKhoan;
+import view.model.TaiKhoan;
 import view.until.DangNhap;
 import repository.dangnhap.DangNhapRepository;
 
