@@ -21,6 +21,7 @@ import net.miginfocom.swing.MigLayout;
 import org.jdesktop.animation.timing.Animator;
 import org.jdesktop.animation.timing.TimingTarget;
 import org.jdesktop.animation.timing.TimingTargetAdapter;
+import view.dangnhap.DangNhapView;
 import view.giaodienjpanel.GiaoDienKhachHangJPanel;
 
 /**
@@ -113,13 +114,13 @@ public class Main extends javax.swing.JFrame {
                 } else if (index == 2) {
                     main.show(new Form_2());
                 }
-                 else if (index == 4) {
+                 else if (index == 4 && DangNhapView.roleDN) {
                     main.show(new view.giaodienjpanel.GiaoDienSanPhamJPanel());
-                }else if (index == 6) {
+                }else if (index == 6 && DangNhapView.roleDN) {
                     main.show(new view.giaodienjpanel.GiaoDienKhachHangJPanel());
-                } else if (index == 8) {
+                } else if (index == 8 ) {
                     main.show(new view.giaodienjpanel.GiaoDienNhanVienJPanel());
-                } else if (index == 10) {
+                } else if (index == 10 ) {
                     main.show(new view.giaodienjpanel.GiaoDienKhuyenMaiJPanel());
                 }
                 

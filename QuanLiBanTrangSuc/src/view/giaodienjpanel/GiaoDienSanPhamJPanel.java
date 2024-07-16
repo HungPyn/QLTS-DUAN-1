@@ -4,6 +4,12 @@
  */
 package view.giaodienjpanel;
 
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
+import model.ChiTietSanPham;
+import repository.ChiTietSanPham.repoChiTietSanPham;
+import repository.sanpham.SanPhamRepository;
 import service.GiaoDienService;
 import view.main.Main;
 import view.sanphamdialog.QuanLiDialog1;
@@ -18,16 +24,30 @@ import view.until.GiaoDienJpanel;
  * @author HUNGpYN
  */
 public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
-
+    private List<ChiTietSanPham> ctList = new ArrayList<>();
+    private repoChiTietSanPham rpctsp = new repoChiTietSanPham();
+    private ChiTietSanPham ctsp = new ChiTietSanPham();
     private Main main;
     private GiaoDienService gds = new GiaoDienService();
     GiaoDienJpanel gd = new GiaoDienJpanel();
-
+    private DefaultTableModel model;
     public GiaoDienSanPhamJPanel() {
         initComponents();
         gd.sizeButton(btn_Xoa);
+        fillToTable(ctList);
     }
-
+    
+    void fillToTable(List<ChiTietSanPham> Listctsp) {
+        Listctsp = rpctsp.getAll();
+        String hienthi[] = {"Mã Trang Sức","Loại Sản Phẩm", "Tên Trang Sức", "Giá Giảm", "Tồn Kho","Giới Tính","Trạng Thái"};
+        model = new DefaultTableModel(hienthi, 0);
+        for (ChiTietSanPham ctsp : Listctsp) {
+            Object rowObject[] = {ctsp.getIDChiTietSanPham(),ctsp.getIDSanPham().getTenSanPham(),ctsp.getTen(),ctsp.getGiaMoi(),ctsp.getSoLuongTonKho(),ctsp.getIDSanPham().getIDGioiTinh().getGioiTinh(),ctsp.isTrangThai() ? "Còn Hàng" : "Hết Hàng"};
+            model.addRow(rowObject);
+        }
+        tblThongTinChiTietSanPham.setModel(model);
+    
+    }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -66,7 +86,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
         jRadioButton7 = new javax.swing.JRadioButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblThongTinChiTietSanPham = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
@@ -347,8 +367,8 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTable1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblThongTinChiTietSanPham.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
+        tblThongTinChiTietSanPham.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -367,7 +387,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tblThongTinChiTietSanPham);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -501,7 +521,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
     private javax.swing.JRadioButton jRadioButton6;
     private javax.swing.JRadioButton jRadioButton7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTable tblThongTinChiTietSanPham;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,19 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package repository.sanpham;
+package repository.ChiTietSanPham;
 
 import java.util.List;
-import model.SanPham;
+import model.ChiTietSanPham;
 
 /**
  *
- * @author HUNGpYN
+ * @author WINDOWS10
  */
-public interface SanPhamInterface {
-    public List<SanPham> getAll();
-    public int creat();
-    public int update();
-    public int delete();
-   
+public interface InterfaceRepoChiTietSanPham {
+    public List<ChiTietSanPham> getAll();
 }

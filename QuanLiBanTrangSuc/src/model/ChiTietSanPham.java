@@ -19,21 +19,19 @@ public class ChiTietSanPham {
     private ChatLieu IDChatLieu;
     private int SoLuongTonKho;
     private int SoLuongDaQuy;
-    private Double GiaCu;
     private Double GiaMoi;
+    private Double GiaCu;
     private GiamGia IDGiamGia;
     private String HinhAnh;
     private NguonGoc IDNguonGoc;
     private boolean TrangThai;
     private Float TrongLuong;
     private DaQuy IDDaQuy;
-    private Date NgayTao;
-    private Date NgaySua;
 
     public ChiTietSanPham() {
-    }    
+    }
 
-    public ChiTietSanPham(String IDChiTietSanPham, KiemDinh IDKIemDinh, SanPham IDSanPham, Size IDSize, String Ten, ChatLieu IDChatLieu, int SoLuongTonKho, int SoLuongDaQuy, Double GiaCu, Double GiaMoi, GiamGia IDGiamGia, String HinhAnh, NguonGoc IDNguonGoc, boolean TrangThai, Float TrongLuong, DaQuy IDDaQuy, Date NgayTao, Date NgaySua) {
+    public ChiTietSanPham(String IDChiTietSanPham, KiemDinh IDKIemDinh, SanPham IDSanPham, Size IDSize, String Ten, ChatLieu IDChatLieu, int SoLuongTonKho, int SoLuongDaQuy, Double GiaMoi, Double GiaCu, GiamGia IDGiamGia, String HinhAnh, NguonGoc IDNguonGoc, boolean TrangThai, Float TrongLuong, DaQuy IDDaQuy) {
         this.IDChiTietSanPham = IDChiTietSanPham;
         this.IDKIemDinh = IDKIemDinh;
         this.IDSanPham = IDSanPham;
@@ -42,16 +40,14 @@ public class ChiTietSanPham {
         this.IDChatLieu = IDChatLieu;
         this.SoLuongTonKho = SoLuongTonKho;
         this.SoLuongDaQuy = SoLuongDaQuy;
-        this.GiaCu = GiaCu;
         this.GiaMoi = GiaMoi;
+        this.GiaCu = GiaCu;
         this.IDGiamGia = IDGiamGia;
         this.HinhAnh = HinhAnh;
         this.IDNguonGoc = IDNguonGoc;
         this.TrangThai = TrangThai;
         this.TrongLuong = TrongLuong;
         this.IDDaQuy = IDDaQuy;
-        this.NgayTao = NgayTao;
-        this.NgaySua = NgaySua;
     }
 
     public String getIDChiTietSanPham() {
@@ -118,20 +114,20 @@ public class ChiTietSanPham {
         this.SoLuongDaQuy = SoLuongDaQuy;
     }
 
-    public Double getGiaCu() {
-        return GiaCu;
-    }
-
-    public void setGiaCu(Double GiaCu) {
-        this.GiaCu = GiaCu;
-    }
-
     public Double getGiaMoi() {
         return GiaMoi;
     }
 
     public void setGiaMoi(Double GiaMoi) {
         this.GiaMoi = GiaMoi;
+    }
+
+    public Double getGiaCu() {
+        return GiaCu;
+    }
+
+    public void setGiaCu(Double GiaCu) {
+        this.GiaCu = GiaCu;
     }
 
     public GiamGia getIDGiamGia() {
@@ -182,20 +178,9 @@ public class ChiTietSanPham {
         this.IDDaQuy = IDDaQuy;
     }
 
-    public Date getNgayTao() {
-        return NgayTao;
-    }
+    
+   
 
-    public void setNgayTao(Date NgayTao) {
-        this.NgayTao = NgayTao;
-    }
-
-    public Date getNgaySua() {
-        return NgaySua;
-    }
-
-    public void setNgaySua(Date NgaySua) {
-        this.NgaySua = NgaySua;
-    }
+    
     
 }
