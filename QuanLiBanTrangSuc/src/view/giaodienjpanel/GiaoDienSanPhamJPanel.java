@@ -4,7 +4,19 @@
  */
 package view.giaodienjpanel;
 
+<<<<<<< Updated upstream
+=======
+import repository.sanpham.SanPhamRepository;
+import service.GiaoDienService;
+import view.main.Main;
+import view.sanphamdialog.QuanLiDialog1;
+import view.sanphamdialog.SuaSanPhamDialog;
+import view.sanphamdialog.ThemSanPhamDialog;
+import view.sanphamdialog.ThongTinChiTietSanPhamDialog;
+import view.sanphamdialog.XoaSanPhamDialog;
+>>>>>>> Stashed changes
 import view.until.GiaoDienJpanel;
+import view.until.SanPhamUntil;
 
 /**
  *
@@ -12,10 +24,19 @@ import view.until.GiaoDienJpanel;
  */
 public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
 
+<<<<<<< Updated upstream
     GiaoDienJpanel gd = new GiaoDienJpanel();
+=======
+    private Main main;
+    private GiaoDienService gds = new GiaoDienService();
+    private GiaoDienJpanel gd = new GiaoDienJpanel();
+    private SanPhamUntil spu =  new SanPhamUntil();
+
+>>>>>>> Stashed changes
     public GiaoDienSanPhamJPanel() {
         initComponents();
         gd.sizeButton(btn_Xoa);
+        spu.addLoaiSanPham(cbo_TimKiem);
     }
 
     @SuppressWarnings("unchecked")
@@ -86,7 +107,11 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
 
         btn_Excel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/InExcel.png"))); // NOI18N
 
+<<<<<<< Updated upstream
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+=======
+        cbo_TimKiem.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tất Cả" }));
+>>>>>>> Stashed changes
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

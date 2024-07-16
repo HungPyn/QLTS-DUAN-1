@@ -5,16 +5,31 @@
 package view.sanphamdialog;
 
 import java.awt.Color;
+<<<<<<< Updated upstream
+=======
+import view.until.SanPhamUntil;
+
+>>>>>>> Stashed changes
 import view.until.ViewDialog;
 
 public final class ThemSanPhamDialog extends javax.swing.JDialog {
-
+    
     ViewDialog vd = new ViewDialog();
+<<<<<<< Updated upstream
+=======
+    private SanPhamUntil spu = new SanPhamUntil();
+    
+>>>>>>> Stashed changes
 
     public ThemSanPhamDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        setTitle("LUXURY STORE");
+        fontGiaoDien();
+
+    }
+//    xử lý font sản giao diện
+    void fontGiaoDien(){
+                setTitle("LUXURY STORE");
         setLocationRelativeTo(null);
         vd.fontBtn(btn_ChonAnh);
         vd.fontText(txt_TenTrangSuc);
@@ -24,8 +39,31 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
         vd.fontBtn(btn_LamMoi);
         vd.fontBtn(btn_Luu);
         btn_ChonAnh.setBackground(Color.WHITE);
+<<<<<<< Updated upstream
 
+=======
+        spu.addSize(cbo_Size);
+        spu.addLoaiSanPham(cbo_LoaiTrangSuc);
+        spu.addChatLieu(cbo_ChatLieu);
+        spu.addTenDa(cbo_LoaiDa);
+        spu.addXuatXu(cbo_XuatXu);
+        spu.addKiemDinh(cbo_KiemDinh);
     }
+    void lamMoi(){
+        spu.lamMoiText(txt_GiaBan);
+        spu.lamMoiText(txt_TenTrangSuc);
+        spu.lamMoiText(txt_TrongLuong);
+        spu.lamMoiText(txt_SoLuongDa);
+        spu.lamMoiCbo(cbo_Size);
+        spu.lamMoiCbo(cbo_ChatLieu);
+        spu.lamMoiCbo(cbo_KiemDinh);
+        spu.lamMoiCbo(cbo_LoaiTrangSuc);
+        spu.lamMoiCbo(cbo_LoaiDa);
+        spu.lamMoiCbo(cbo_XuatXu);
+        spu.lamMoiCbo(cbo_LoaiDa);
+>>>>>>> Stashed changes
+    }
+
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -53,13 +91,13 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
         cbo_XuatXu = new javax.swing.JComboBox<>();
         cbo_LoaiDa = new javax.swing.JComboBox<>();
         jLabel18 = new javax.swing.JLabel();
-        cbo_SoLuongDa = new javax.swing.JComboBox<>();
         jLabel19 = new javax.swing.JLabel();
         cbo_Size = new javax.swing.JComboBox<>();
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        cbo_XuatXu1 = new javax.swing.JComboBox<>();
-        cbo_TrongLuong = new javax.swing.JComboBox<>();
+        cbo_KiemDinh = new javax.swing.JComboBox<>();
+        txt_SoLuongDa = new javax.swing.JTextField();
+        txt_TrongLuong = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         btn_Huy = new javax.swing.JButton();
         btn_Luu = new javax.swing.JButton();
@@ -118,8 +156,6 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
 
         txt_GiaBan.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
-        cbo_ChatLieu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         txt_TenTrangSuc.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
 
         cbo_LoaiTrangSuc.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -137,17 +173,19 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
         jLabel16.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel16.setText("Số Lượng Đá");
 
+<<<<<<< Updated upstream
         jLabel17.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel17.setText("Màu Sắc");
 
         cbo_XuatXu.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+=======
+>>>>>>> Stashed changes
         cbo_XuatXu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbo_XuatXuActionPerformed(evt);
             }
         });
 
-        cbo_LoaiDa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cbo_LoaiDa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbo_LoaiDaActionPerformed(evt);
@@ -156,13 +194,6 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
 
         jLabel18.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel18.setText("Xuất Xứ");
-
-        cbo_SoLuongDa.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbo_SoLuongDa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbo_SoLuongDaActionPerformed(evt);
-            }
-        });
 
         jLabel19.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel19.setText("Size");
@@ -180,17 +211,9 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
         jLabel21.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel21.setText("Đơn Vị Kiểm Định");
 
-        cbo_XuatXu1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbo_XuatXu1.addActionListener(new java.awt.event.ActionListener() {
+        cbo_KiemDinh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbo_XuatXu1ActionPerformed(evt);
-            }
-        });
-
-        cbo_TrongLuong.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cbo_TrongLuong.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbo_TrongLuongActionPerformed(evt);
+                cbo_KiemDinhActionPerformed(evt);
             }
         });
 
@@ -202,13 +225,11 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
                 .addGap(31, 31, 31)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(cbo_XuatXu1, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cbo_KiemDinh, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel21)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< Updated upstream
                             .addGroup(jPanel6Layout.createSequentialGroup()
                                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel12)
@@ -242,6 +263,37 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
                                             .addComponent(cbo_TrongLuong, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                                 .addGap(0, 0, Short.MAX_VALUE)))
                         .addGap(44, 44, 44))))
+=======
+                            .addComponent(jLabel21)
+                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jLabel18)
+                                .addComponent(txt_TenTrangSuc, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(cbo_XuatXu, javax.swing.GroupLayout.PREFERRED_SIZE, 475, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(jPanel6Layout.createSequentialGroup()
+                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel15)
+                                        .addComponent(cbo_LoaiDa, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(jLabel12)
+                                            .addComponent(jLabel11)
+                                            .addComponent(jLabel13)
+                                            .addComponent(jLabel14)
+                                            .addComponent(cbo_LoaiTrangSuc, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                            .addComponent(txt_GiaBan)
+                                            .addComponent(cbo_ChatLieu, 0, 178, Short.MAX_VALUE)))
+                                    .addGap(110, 110, 110)
+                                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(cbo_Size, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addGroup(jPanel6Layout.createSequentialGroup()
+                                            .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                                .addComponent(txt_TrongLuong, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                                                .addComponent(jLabel19)
+                                                .addComponent(jLabel20)
+                                                .addComponent(jLabel16)
+                                                .addComponent(txt_SoLuongDa))
+                                            .addGap(0, 0, Short.MAX_VALUE))))))
+                        .addContainerGap(44, Short.MAX_VALUE))))
+>>>>>>> Stashed changes
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,6 +307,7 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cbo_LoaiTrangSuc, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+<<<<<<< Updated upstream
                 .addComponent(jLabel14)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txt_GiaBan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -267,21 +320,31 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
                     .addComponent(cbo_ChatLieu, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbo_MauSac, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
+=======
+>>>>>>> Stashed changes
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
+                    .addComponent(jLabel14)
                     .addComponent(jLabel19))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbo_LoaiDa, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_GiaBan, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(cbo_Size, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
+                    .addComponent(jLabel12)
                     .addComponent(jLabel20))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(cbo_ChatLieu, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(txt_TrongLuong))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbo_SoLuongDa, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cbo_TrongLuong, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel16))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(cbo_LoaiDa, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txt_SoLuongDa, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel18)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -289,8 +352,8 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel21)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cbo_XuatXu1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(10, Short.MAX_VALUE))
+                .addComponent(cbo_KiemDinh, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
@@ -321,6 +384,11 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
         btn_LamMoi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/reset.png"))); // NOI18N
         btn_LamMoi.setText("Làm Mới");
         btn_LamMoi.setBorder(null);
+        btn_LamMoi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_LamMoiActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
@@ -398,10 +466,6 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void cbo_SoLuongDaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_SoLuongDaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cbo_SoLuongDaActionPerformed
-
     private void cbo_LoaiDaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_LoaiDaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbo_LoaiDaActionPerformed
@@ -420,19 +484,21 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
 
     private void btn_HuyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_HuyActionPerformed
         // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_btn_HuyActionPerformed
 
     private void btn_LuuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LuuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btn_LuuActionPerformed
 
-    private void cbo_XuatXu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_XuatXu1ActionPerformed
+    private void cbo_KiemDinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_KiemDinhActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbo_XuatXu1ActionPerformed
+    }//GEN-LAST:event_cbo_KiemDinhActionPerformed
 
-    private void cbo_TrongLuongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbo_TrongLuongActionPerformed
+    private void btn_LamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_LamMoiActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cbo_TrongLuongActionPerformed
+        lamMoi();
+    }//GEN-LAST:event_btn_LamMoiActionPerformed
 
     /**
      * @param args the command line arguments
@@ -486,14 +552,12 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
     private javax.swing.JButton btn_Luu;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JComboBox<String> cbo_ChatLieu;
+    private javax.swing.JComboBox<String> cbo_KiemDinh;
     private javax.swing.JComboBox<String> cbo_LoaiDa;
     private javax.swing.JComboBox<String> cbo_LoaiTrangSuc;
     private javax.swing.JComboBox<String> cbo_MauSac;
     private javax.swing.JComboBox<String> cbo_Size;
-    private javax.swing.JComboBox<String> cbo_SoLuongDa;
-    private javax.swing.JComboBox<String> cbo_TrongLuong;
     private javax.swing.JComboBox<String> cbo_XuatXu;
-    private javax.swing.JComboBox<String> cbo_XuatXu1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -513,6 +577,8 @@ public final class ThemSanPhamDialog extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JLabel txt_Anh;
     private javax.swing.JTextField txt_GiaBan;
+    private javax.swing.JTextField txt_SoLuongDa;
     private javax.swing.JTextField txt_TenTrangSuc;
+    private javax.swing.JTextField txt_TrongLuong;
     // End of variables declaration//GEN-END:variables
 }

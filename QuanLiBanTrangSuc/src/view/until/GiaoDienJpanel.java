@@ -6,6 +6,11 @@ package view.until;
 
 import java.awt.Color;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
+import model.SanPham;
+import model.Size;
+import repository.Size.SizeRepository;
+import repository.sanpham.SanPhamRepository;
 
 /**
  *
@@ -18,4 +23,6 @@ public class GiaoDienJpanel implements GiaoDienJpanelInterface {
         button.setBackground(Color.WHITE);
     }
 
+    
+    
 }
