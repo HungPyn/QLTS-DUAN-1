@@ -4,12 +4,20 @@
  */
 package view.component;
 
+import java.awt.Window;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import view.dangnhap.DangNhapView;
+import view.main.Main;
 import view.nhanviendialog.ChiTietNhanVienDiaLog;
 
 public class Profile extends javax.swing.JPanel {
 
+    private Main main;
+
+    public void setMain(Main main) {
+        this.main = main;
+    }
 
     /**
      * Creates new form Profile
@@ -101,12 +109,13 @@ public class Profile extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblRoleMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRoleMouseClicked
-        
+
     }//GEN-LAST:event_lblRoleMouseClicked
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-
-        System.exit(0);
+        Window window = SwingUtilities.getWindowAncestor(this);
+        window.dispose();
+        new DangNhapView().setVisible(true);
     }//GEN-LAST:event_jLabel1MouseClicked
 
 

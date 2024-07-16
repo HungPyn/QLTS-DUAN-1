@@ -9,6 +9,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
+import view.main.Main;
 
 /**
  *
@@ -16,7 +17,7 @@ import java.awt.event.MouseAdapter;
  */
 public class MenuLayout extends javax.swing.JPanel {
     private boolean show;
-
+    private Main main;
     public boolean isShow() {
         return show;
     }
@@ -34,8 +35,9 @@ public class MenuLayout extends javax.swing.JPanel {
         repaint(); 
     }
     private float alpha = 1.0f;
-    public MenuLayout() {
+    public MenuLayout(Main main) {
         initComponents();
+        this.main = main;
         setOpaque(false);
         setVisible(false);
         menu1.addMouseListener(new MouseAdapter() {

@@ -12,12 +12,15 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.geom.Path2D;
 import javax.swing.JFrame;
+import view.main.Main;
 
 
 public class Menu extends javax.swing.JPanel {
-
+    private Main main;
     private EventMenuSelected event =null;
-
+    public void setMain(Main main) {
+        this.main = main;
+    }
     public void addEventMenuSelected(EventMenuSelected event) {
         this.event = event;
         listMenu1.addEventMenuSelected(event);

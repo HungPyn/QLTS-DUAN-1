@@ -39,7 +39,7 @@ public class Main extends javax.swing.JFrame {
         initComponents();
         layout = new MigLayout("fill", "0[fill]0", "0[fill]0");
         main = new MainForm();
-        menu = new MenuLayout();
+        menu = new MenuLayout(this);
         menu.getMenu().initMoving(Main.this); 
         main.initMoving(Main.this);
         mainPanel.setLayer(menu, JLayeredPane.POPUP_LAYER);
