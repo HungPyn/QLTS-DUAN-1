@@ -4,6 +4,13 @@
  */
 package view.giaodienjpanel;
 
+import service.GiaoDienService;
+import view.main.Main;
+import view.sanphamdialog.QuanLiDialog1;
+import view.sanphamdialog.SuaSanPhamDialog;
+import view.sanphamdialog.ThemSanPhamDialog;
+import view.sanphamdialog.ThongTinChiTietSanPhamDialog;
+import view.sanphamdialog.XoaSanPhamDialog;
 import view.until.GiaoDienJpanel;
 
 /**
@@ -12,7 +19,10 @@ import view.until.GiaoDienJpanel;
  */
 public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
 
+    private Main main;
+    private GiaoDienService gds = new GiaoDienService();
     GiaoDienJpanel gd = new GiaoDienJpanel();
+
     public GiaoDienSanPhamJPanel() {
         initComponents();
         gd.sizeButton(btn_Xoa);
@@ -22,6 +32,9 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         btn_TimKiem = new javax.swing.JButton();
         btn_Them = new javax.swing.JButton();
@@ -30,7 +43,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
         btn_ChiTiet = new javax.swing.JButton();
         btn_ThuocTinh = new javax.swing.JButton();
         btn_Excel = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cbo_TimKiem = new javax.swing.JComboBox<>();
         jTextField1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -65,6 +78,11 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
         btn_TimKiem.setText("Tìm Kiếm");
 
         btn_Them.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/them1.png"))); // NOI18N
+        btn_Them.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ThemActionPerformed(evt);
+            }
+        });
 
         btn_Sua.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Sua.png"))); // NOI18N
         btn_Sua.addActionListener(new java.awt.event.ActionListener() {
@@ -74,6 +92,11 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
         });
 
         btn_Xoa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/Xoa.png"))); // NOI18N
+        btn_Xoa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_XoaActionPerformed(evt);
+            }
+        });
 
         btn_ChiTiet.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/ChiTiet.png"))); // NOI18N
         btn_ChiTiet.addActionListener(new java.awt.event.ActionListener() {
@@ -83,10 +106,15 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
         });
 
         btn_ThuocTinh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/QuanLi.png"))); // NOI18N
+        btn_ThuocTinh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_ThuocTinhActionPerformed(evt);
+            }
+        });
 
         btn_Excel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/InExcel.png"))); // NOI18N
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cbo_TimKiem.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -148,7 +176,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
                     .addComponent(btn_Excel, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cbo_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 127, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -167,7 +195,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
                     .addComponent(btn_ChiTiet)
                     .addComponent(btn_ThuocTinh)
                     .addComponent(btn_Excel)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cbo_TimKiem, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -208,6 +236,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jLabel4.setText("Giới Tính");
 
+        buttonGroup1.add(jRadioButton1);
         jRadioButton1.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jRadioButton1.setText("Còn Hàng");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -216,6 +245,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
             }
         });
 
+        buttonGroup2.add(jRadioButton2);
         jRadioButton2.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jRadioButton2.setText("Nam");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -224,6 +254,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
             }
         });
 
+        buttonGroup1.add(jRadioButton3);
         jRadioButton3.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jRadioButton3.setText("Hết Hàng");
         jRadioButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -232,6 +263,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
             }
         });
 
+        buttonGroup2.add(jRadioButton4);
         jRadioButton4.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jRadioButton4.setText("Nữ");
         jRadioButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -240,6 +272,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
             }
         });
 
+        buttonGroup2.add(jRadioButton5);
         jRadioButton5.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jRadioButton5.setText("Chung");
         jRadioButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -248,6 +281,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
             }
         });
 
+        buttonGroup3.add(jRadioButton6);
         jRadioButton6.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jRadioButton6.setText("Có");
         jRadioButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -256,6 +290,7 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
             }
         });
 
+        buttonGroup3.add(jRadioButton7);
         jRadioButton7.setFont(new java.awt.Font("Tahoma", 0, 13)); // NOI18N
         jRadioButton7.setText("Không");
         jRadioButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -321,11 +356,11 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "Mã Trang Sức", "Tên Trang Sức", "Giá Bán", "Giá Giảm", "Hình Ảnh", "Trạng Thái"
+                "Mã Trang Sức", "Tên Trang Sức", "Giá Bán", "Giá Giảm", "Tồn Kho", "Trạng Thái"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true, true
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -399,15 +434,37 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
 
     private void btn_SuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_SuaActionPerformed
         // TODO add your handling code here:
+        SuaSanPhamDialog suaDialog = new SuaSanPhamDialog(main, true);
+        gds.clicked(suaDialog);
     }//GEN-LAST:event_btn_SuaActionPerformed
 
     private void btn_ChiTietActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ChiTietActionPerformed
         // TODO add your handling code here:
+                         ThongTinChiTietSanPhamDialog ttct = new ThongTinChiTietSanPhamDialog(main, true);
+                 gds.clicked(ttct);
     }//GEN-LAST:event_btn_ChiTietActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void btn_ThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ThemActionPerformed
+        // TODO add your handling code here:
+        ThemSanPhamDialog themDialog = new ThemSanPhamDialog(main, true);
+        gds.clicked(themDialog);
+    }//GEN-LAST:event_btn_ThemActionPerformed
+
+    private void btn_XoaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_XoaActionPerformed
+        // TODO add your handling code here:
+        XoaSanPhamDialog xoaDialog = new XoaSanPhamDialog(main, true);
+        gds.clicked(xoaDialog);
+    }//GEN-LAST:event_btn_XoaActionPerformed
+
+    private void btn_ThuocTinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ThuocTinhActionPerformed
+        // TODO add your handling code here:
+                         QuanLiDialog1 ql = new QuanLiDialog1(main, true);
+                 gds.clicked(ql);
+    }//GEN-LAST:event_btn_ThuocTinhActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -418,7 +475,10 @@ public class GiaoDienSanPhamJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btn_ThuocTinh;
     private javax.swing.JButton btn_TimKiem;
     private javax.swing.JButton btn_Xoa;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.JComboBox<String> cbo_TimKiem;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

@@ -12,31 +12,15 @@ import java.util.Date;
  */
 public class HoaDonChiTiet {
     private String IDHoaDonChiTiet;
-    private String IDChiTietSanPham;
-    private String IDHoaDon;
+    private ChiTietSanPham IDChiTietSanPham;
+    private HoaDon IDHoaDon;
     private int SoLUongSanPHam;
     private Double TongGia;
     private Date NgayTao;
     private Date NgaySua;
     private boolean TrangThai;
-    
-    private HoaDonChiTiet IdHoaDonChiTiet;
-    private HoaDon IdHoaDon;
 
     public HoaDonChiTiet() {
-    }
-
-    public HoaDonChiTiet(String IDHoaDonChiTiet, String IDChiTietSanPham, String IDHoaDon, int SoLUongSanPHam, Double TongGia, Date NgayTao, Date NgaySua, boolean TrangThai, HoaDonChiTiet IdHoaDonChiTiet, HoaDon IdHoaDon) {
-        this.IDHoaDonChiTiet = IDHoaDonChiTiet;
-        this.IDChiTietSanPham = IDChiTietSanPham;
-        this.IDHoaDon = IDHoaDon;
-        this.SoLUongSanPHam = SoLUongSanPHam;
-        this.TongGia = TongGia;
-        this.NgayTao = NgayTao;
-        this.NgaySua = NgaySua;
-        this.TrangThai = TrangThai;
-        this.IdHoaDonChiTiet = IdHoaDonChiTiet;
-        this.IdHoaDon = IdHoaDon;
     }
 
     public String getIDHoaDonChiTiet() {
@@ -47,19 +31,19 @@ public class HoaDonChiTiet {
         this.IDHoaDonChiTiet = IDHoaDonChiTiet;
     }
 
-    public String getIDChiTietSanPham() {
+    public ChiTietSanPham getIDChiTietSanPham() {
         return IDChiTietSanPham;
     }
 
-    public void setIDChiTietSanPham(String IDChiTietSanPham) {
+    public void setIDChiTietSanPham(ChiTietSanPham IDChiTietSanPham) {
         this.IDChiTietSanPham = IDChiTietSanPham;
     }
 
-    public String getIDHoaDon() {
+    public HoaDon getIDHoaDon() {
         return IDHoaDon;
     }
 
-    public void setIDHoaDon(String IDHoaDon) {
+    public void setIDHoaDon(HoaDon IDHoaDon) {
         this.IDHoaDon = IDHoaDon;
     }
 
@@ -102,22 +86,6 @@ public class HoaDonChiTiet {
     public void setTrangThai(boolean TrangThai) {
         this.TrangThai = TrangThai;
     }
-
-    public HoaDonChiTiet getIdHoaDonChiTiet() {
-        return IdHoaDonChiTiet;
-    }
-
-    public void setIdHoaDonChiTiet(HoaDonChiTiet IdHoaDonChiTiet) {
-        this.IdHoaDonChiTiet = IdHoaDonChiTiet;
-    }
-
-    public HoaDon getIdHoaDon() {
-        return IdHoaDon;
-    }
-
-    public void setIdHoaDon(HoaDon IdHoaDon) {
-        this.IdHoaDon = IdHoaDon;
-    }
-    
+  
     
 }

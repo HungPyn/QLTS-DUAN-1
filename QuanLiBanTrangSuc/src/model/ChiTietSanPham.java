@@ -4,7 +4,7 @@
  */
 package model;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  *
@@ -12,36 +12,28 @@ import java.util.Date;
  */
 public class ChiTietSanPham {
     private String IDChiTietSanPham;
-    private String IDKIemDinh;
-    private String IDSanPham;
-    private String IDSize;
+    private KiemDinh IDKIemDinh;
+    private SanPham IDSanPham;
+    private Size IDSize;
     private String Ten;
-    private String IDChatLieu;
+    private ChatLieu IDChatLieu;
     private int SoLuongTonKho;
     private int SoLuongDaQuy;
     private Double GiaCu;
     private Double GiaMoi;
-    private String IDGiamGia;
+    private GiamGia IDGiamGia;
     private String HinhAnh;
-    private String IDNguonGoc;
+    private NguonGoc IDNguonGoc;
     private boolean TrangThai;
     private Float TrongLuong;
-    private String IDDaQuy;
+    private DaQuy IDDaQuy;
     private Date NgayTao;
     private Date NgaySua;
-    
-    private KiemDinh IdKiemDinh;
-    private SanPham IdSanPham;
-    private Size IdSize;
-    private GiamGia IdGiamGia;
-    private NguonGoc IdNguonGoc;
-    private DaQuy IdDaQuy;
-    private ChatLieu IdChatLieu;
 
     public ChiTietSanPham() {
-    }
+    }    
 
-    public ChiTietSanPham(String IDChiTietSanPham, String IDKIemDinh, String IDSanPham, String IDSize, String Ten, String IDChatLieu, int SoLuongTonKho, int SoLuongDaQuy, Double GiaCu, Double GiaMoi, String IDGiamGia, String HinhAnh, String IDNguonGoc, boolean TrangThai, Float TrongLuong, String IDDaQuy, Date NgayTao, Date NgaySua, KiemDinh IdKiemDinh, SanPham IdSanPham, Size IdSize, GiamGia IdGiamGia, NguonGoc IdNguonGoc, DaQuy IdDaQuy, ChatLieu IdChatLieu) {
+    public ChiTietSanPham(String IDChiTietSanPham, KiemDinh IDKIemDinh, SanPham IDSanPham, Size IDSize, String Ten, ChatLieu IDChatLieu, int SoLuongTonKho, int SoLuongDaQuy, Double GiaCu, Double GiaMoi, GiamGia IDGiamGia, String HinhAnh, NguonGoc IDNguonGoc, boolean TrangThai, Float TrongLuong, DaQuy IDDaQuy, Date NgayTao, Date NgaySua) {
         this.IDChiTietSanPham = IDChiTietSanPham;
         this.IDKIemDinh = IDKIemDinh;
         this.IDSanPham = IDSanPham;
@@ -60,13 +52,6 @@ public class ChiTietSanPham {
         this.IDDaQuy = IDDaQuy;
         this.NgayTao = NgayTao;
         this.NgaySua = NgaySua;
-        this.IdKiemDinh = IdKiemDinh;
-        this.IdSanPham = IdSanPham;
-        this.IdSize = IdSize;
-        this.IdGiamGia = IdGiamGia;
-        this.IdNguonGoc = IdNguonGoc;
-        this.IdDaQuy = IdDaQuy;
-        this.IdChatLieu = IdChatLieu;
     }
 
     public String getIDChiTietSanPham() {
@@ -77,27 +62,27 @@ public class ChiTietSanPham {
         this.IDChiTietSanPham = IDChiTietSanPham;
     }
 
-    public String getIDKIemDinh() {
+    public KiemDinh getIDKIemDinh() {
         return IDKIemDinh;
     }
 
-    public void setIDKIemDinh(String IDKIemDinh) {
+    public void setIDKIemDinh(KiemDinh IDKIemDinh) {
         this.IDKIemDinh = IDKIemDinh;
     }
 
-    public String getIDSanPham() {
+    public SanPham getIDSanPham() {
         return IDSanPham;
     }
 
-    public void setIDSanPham(String IDSanPham) {
+    public void setIDSanPham(SanPham IDSanPham) {
         this.IDSanPham = IDSanPham;
     }
 
-    public String getIDSize() {
+    public Size getIDSize() {
         return IDSize;
     }
 
-    public void setIDSize(String IDSize) {
+    public void setIDSize(Size IDSize) {
         this.IDSize = IDSize;
     }
 
@@ -109,11 +94,11 @@ public class ChiTietSanPham {
         this.Ten = Ten;
     }
 
-    public String getIDChatLieu() {
+    public ChatLieu getIDChatLieu() {
         return IDChatLieu;
     }
 
-    public void setIDChatLieu(String IDChatLieu) {
+    public void setIDChatLieu(ChatLieu IDChatLieu) {
         this.IDChatLieu = IDChatLieu;
     }
 
@@ -149,11 +134,11 @@ public class ChiTietSanPham {
         this.GiaMoi = GiaMoi;
     }
 
-    public String getIDGiamGia() {
+    public GiamGia getIDGiamGia() {
         return IDGiamGia;
     }
 
-    public void setIDGiamGia(String IDGiamGia) {
+    public void setIDGiamGia(GiamGia IDGiamGia) {
         this.IDGiamGia = IDGiamGia;
     }
 
@@ -165,11 +150,11 @@ public class ChiTietSanPham {
         this.HinhAnh = HinhAnh;
     }
 
-    public String getIDNguonGoc() {
+    public NguonGoc getIDNguonGoc() {
         return IDNguonGoc;
     }
 
-    public void setIDNguonGoc(String IDNguonGoc) {
+    public void setIDNguonGoc(NguonGoc IDNguonGoc) {
         this.IDNguonGoc = IDNguonGoc;
     }
 
@@ -189,11 +174,11 @@ public class ChiTietSanPham {
         this.TrongLuong = TrongLuong;
     }
 
-    public String getIDDaQuy() {
+    public DaQuy getIDDaQuy() {
         return IDDaQuy;
     }
 
-    public void setIDDaQuy(String IDDaQuy) {
+    public void setIDDaQuy(DaQuy IDDaQuy) {
         this.IDDaQuy = IDDaQuy;
     }
 
@@ -212,62 +197,5 @@ public class ChiTietSanPham {
     public void setNgaySua(Date NgaySua) {
         this.NgaySua = NgaySua;
     }
-
-    public KiemDinh getIdKiemDinh() {
-        return IdKiemDinh;
-    }
-
-    public void setIdKiemDinh(KiemDinh IdKiemDinh) {
-        this.IdKiemDinh = IdKiemDinh;
-    }
-
-    public SanPham getIdSanPham() {
-        return IdSanPham;
-    }
-
-    public void setIdSanPham(SanPham IdSanPham) {
-        this.IdSanPham = IdSanPham;
-    }
-
-    public Size getIdSize() {
-        return IdSize;
-    }
-
-    public void setIdSize(Size IdSize) {
-        this.IdSize = IdSize;
-    }
-
-    public GiamGia getIdGiamGia() {
-        return IdGiamGia;
-    }
-
-    public void setIdGiamGia(GiamGia IdGiamGia) {
-        this.IdGiamGia = IdGiamGia;
-    }
-
-    public NguonGoc getIdNguonGoc() {
-        return IdNguonGoc;
-    }
-
-    public void setIdNguonGoc(NguonGoc IdNguonGoc) {
-        this.IdNguonGoc = IdNguonGoc;
-    }
-
-    public DaQuy getIdDaQuy() {
-        return IdDaQuy;
-    }
-
-    public void setIdDaQuy(DaQuy IdDaQuy) {
-        this.IdDaQuy = IdDaQuy;
-    }
-
-    public ChatLieu getIdChatLieu() {
-        return IdChatLieu;
-    }
-
-    public void setIdChatLieu(ChatLieu IdChatLieu) {
-        this.IdChatLieu = IdChatLieu;
-    }
-    
     
 }

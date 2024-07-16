@@ -11,17 +11,14 @@ import java.util.Date;
  * @author Admin
  */
 public class HoaDon {
+
     private String IDHoaDon;
-    private String IDKhachHang;
-    private String IDTaiKhoan;
-    private String IDVoucher;
     private Double TongTienTRuoc;
     private Double TongTienSau;
     private Date NgayTao;
     private Date NgaySua;
     private boolean TrangThai;
     private boolean TrangThaiTichDiem;
-    
     private KhachHang IdKhachHang;
     private TaiKhoan IdTaiKhoan;
     private Voucher IdVoucher;
@@ -29,11 +26,8 @@ public class HoaDon {
     public HoaDon() {
     }
 
-    public HoaDon(String IDHoaDon, String IDKhachHang, String IDTaiKhoan, String IDVoucher, Double TongTienTRuoc, Double TongTienSau, Date NgayTao, Date NgaySua, boolean TrangThai, boolean TrangThaiTichDiem, KhachHang IdKhachHang, TaiKhoan IdTaiKhoan, Voucher IdVoucher) {
+    public HoaDon(String IDHoaDon, Double TongTienTRuoc, Double TongTienSau, Date NgayTao, Date NgaySua, boolean TrangThai, boolean TrangThaiTichDiem, KhachHang IdKhachHang, TaiKhoan IdTaiKhoan, Voucher IdVoucher) {
         this.IDHoaDon = IDHoaDon;
-        this.IDKhachHang = IDKhachHang;
-        this.IDTaiKhoan = IDTaiKhoan;
-        this.IDVoucher = IDVoucher;
         this.TongTienTRuoc = TongTienTRuoc;
         this.TongTienSau = TongTienSau;
         this.NgayTao = NgayTao;
@@ -51,30 +45,6 @@ public class HoaDon {
 
     public void setIDHoaDon(String IDHoaDon) {
         this.IDHoaDon = IDHoaDon;
-    }
-
-    public String getIDKhachHang() {
-        return IDKhachHang;
-    }
-
-    public void setIDKhachHang(String IDKhachHang) {
-        this.IDKhachHang = IDKhachHang;
-    }
-
-    public String getIDTaiKhoan() {
-        return IDTaiKhoan;
-    }
-
-    public void setIDTaiKhoan(String IDTaiKhoan) {
-        this.IDTaiKhoan = IDTaiKhoan;
-    }
-
-    public String getIDVoucher() {
-        return IDVoucher;
-    }
-
-    public void setIDVoucher(String IDVoucher) {
-        this.IDVoucher = IDVoucher;
     }
 
     public Double getTongTienTRuoc() {
@@ -148,6 +118,6 @@ public class HoaDon {
     public void setIdVoucher(Voucher IdVoucher) {
         this.IdVoucher = IdVoucher;
     }
-    
+
     
 }

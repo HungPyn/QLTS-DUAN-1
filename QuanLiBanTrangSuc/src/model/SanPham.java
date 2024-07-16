@@ -11,10 +11,11 @@ import java.util.Date;
  * @author Admin
  */
 public class SanPham {
+
     private GioiTinh gioiTinh;
     private String IDSanPham;
     private String TenSanPham;
-    private String IDGioiTinh;
+    private GioiTinh IDGioiTinh;
     private Date NgayTao;
     private Date NgaySua;
     private boolean TrangThai;
@@ -22,7 +23,7 @@ public class SanPham {
     public SanPham() {
     }
 
-    public SanPham(GioiTinh gioiTinh, String IDSanPham, String TenSanPham, String IDGioiTinh, Date NgayTao, Date NgaySua, boolean TrangThai) {
+    public SanPham(GioiTinh gioiTinh, String IDSanPham, String TenSanPham, GioiTinh IDGioiTinh, Date NgayTao, Date NgaySua, boolean TrangThai) {
         this.gioiTinh = gioiTinh;
         this.IDSanPham = IDSanPham;
         this.TenSanPham = TenSanPham;
@@ -56,11 +57,11 @@ public class SanPham {
         this.TenSanPham = TenSanPham;
     }
 
-    public String getIDGioiTinh() {
+    public GioiTinh getIDGioiTinh() {
         return IDGioiTinh;
     }
 
-    public void setIDGioiTinh(String IDGioiTinh) {
+    public void setIDGioiTinh(GioiTinh IDGioiTinh) {
         this.IDGioiTinh = IDGioiTinh;
     }
 
@@ -87,6 +88,5 @@ public class SanPham {
     public void setTrangThai(boolean TrangThai) {
         this.TrangThai = TrangThai;
     }
-    
     
 }

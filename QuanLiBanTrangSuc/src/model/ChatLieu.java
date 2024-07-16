@@ -4,7 +4,7 @@
  */
 package model;
 
-import java.util.Date;
+import java.sql.Date;
 
 /**
  *
@@ -14,16 +14,15 @@ public class ChatLieu {
     private String IDChatLieu;
     private String TenChatLieu;
     private float TyLe;
-    private String IDMauSac;
+    private MauSac IDMauSac;
     private Date NgayTao;
     private Date NgaySua;
     private boolean TrangThai;
-     private MauSac IdMauSac;
 
     public ChatLieu() {
     }
 
-    public ChatLieu(String IDChatLieu, String TenChatLieu, float TyLe, String IDMauSac, Date NgayTao, Date NgaySua, boolean TrangThai, MauSac IdMauSac) {
+    public ChatLieu(String IDChatLieu, String TenChatLieu, float TyLe, MauSac IDMauSac, Date NgayTao, Date NgaySua, boolean TrangThai) {
         this.IDChatLieu = IDChatLieu;
         this.TenChatLieu = TenChatLieu;
         this.TyLe = TyLe;
@@ -31,7 +30,6 @@ public class ChatLieu {
         this.NgayTao = NgayTao;
         this.NgaySua = NgaySua;
         this.TrangThai = TrangThai;
-        this.IdMauSac = IdMauSac;
     }
 
     public String getIDChatLieu() {
@@ -58,11 +56,11 @@ public class ChatLieu {
         this.TyLe = TyLe;
     }
 
-    public String getIDMauSac() {
+    public MauSac getIDMauSac() {
         return IDMauSac;
     }
 
-    public void setIDMauSac(String IDMauSac) {
+    public void setIDMauSac(MauSac IDMauSac) {
         this.IDMauSac = IDMauSac;
     }
 
@@ -90,13 +88,5 @@ public class ChatLieu {
         this.TrangThai = TrangThai;
     }
 
-    public MauSac getIdMauSac() {
-        return IdMauSac;
-    }
-
-    public void setIdMauSac(MauSac IdMauSac) {
-        this.IdMauSac = IdMauSac;
-    }
-     
-     
+    
 }
